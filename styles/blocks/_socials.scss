@@ -1,0 +1,29 @@
+.socials {
+  &__list {
+    display: flex;
+    column-gap: 20px;
+  }
+
+  &__link {
+    @include square(30px);
+    @include flex-center(true);
+
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    border-radius: 50%;
+
+    &--dark-bg {
+      background-color: var(--color-dark);
+      color: var(--color-light);
+    }
+
+    @include hover {
+      background-color: var(--color-accent);
+    }
+
+    svg {
+      width: 50%;
+      height: 50%;
+    }
+  }
+}

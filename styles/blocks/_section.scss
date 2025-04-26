@@ -1,0 +1,44 @@
+.section {
+  padding-block: var(--section-padding-y);
+
+  @include mobile {
+    padding-block: calc(var(--section-padding-y) / 2);
+  }
+
+  &--hidden-x {
+    overflow-x: hidden;
+  }
+
+  &--small-padding-top {
+    padding-top: calc(var(--section-padding-y) / 2);
+  }
+
+  &--full-width {
+    max-width: 100%;
+  }
+
+  &__header {
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+    justify-content: center;
+
+    &:not(:last-child) {
+      margin-bottom: 80px;
+
+      @include mobile {
+        margin-bottom: 40px;
+      }
+    }
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 30px;
+      text-align: center;
+    }
+  }
+
+  &__description {
+    max-width: 580px;
+  }
+}

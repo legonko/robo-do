@@ -1,0 +1,18 @@
+.icon {
+  --icon-color: var(--color-accent);
+
+  position: relative;
+
+  &__icon-wrapper {
+    background-color: currentColor;
+    border-radius: 50%;
+
+    svg {
+      color: var(--icon-color);
+      max-width: 60%;
+    }
+
+    @include flex-center;
+    @include square(41px);
+  }
+}

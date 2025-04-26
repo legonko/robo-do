@@ -1,0 +1,46 @@
+.field {
+  --field-input-height: var(--input-height);
+  --field-input-text-color: var(--color-dark);
+  --field-input-bg-color: var(--color-light);
+  --field-input-border-color: var(--color-dark);
+  --field-input-placeholder-color: var(--color-gray-alt);
+  --field-input-hover-bg-color: var(--color-accent);
+  --field-input-hover-text-color: var(--color-dark);
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 5px;
+
+  @include mobile {
+    row-gap: 10px;
+  }
+
+  &__label {
+    @include fluid-text(16, 14);
+  }
+
+  &__input-wrapper {
+    overflow: hidden;
+    display: inline-block;
+    border-radius: var(--border-radius);
+  }
+
+  &__input {
+    width: 100%;
+    padding: 18px 30px;
+    height: var(--field-input-height);
+    border: 1px solid var(--field-input-border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--field-input-bg-color);
+    color: var(--field-input-text-color);
+
+    &::placeholder {
+      color: var(--field-input-placeholder-color);
+    }
+  }
+
+  &__input-wrapper {
+    width: 100%;
+  }
+}

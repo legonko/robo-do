@@ -1,0 +1,50 @@
+.benefits-card {
+  --benefits-item-padding-x: 64px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: 30px;
+
+  @include desktop {
+    --benefits-item-padding-x: 28px;
+  }
+
+  @include mobile-above {
+    &:not(:first-child) {
+      padding-left: var(--benefits-item-padding-x);
+    }
+
+    &:not(:last-child) {
+      padding-right: var(--benefits-item-padding-x);
+      border-right: 1px solid var(--color-dark);
+    }
+  }
+
+  @include mobile {
+    background-color: var(--color-gray);
+    // max-width: 380px;
+    width: 100%;
+    border-radius: var(--border-radius-large);
+    padding: 20px 20px;
+    row-gap: 20px;
+    min-height: 176px;
+
+  }
+
+
+  &__icon-wrapper {
+    @include square(55px);
+    @include flex-center;
+
+    flex-shrink: 0;
+    background-color: var(--color-dark);
+    border-radius: 50%;
+  }
+
+  svg {
+    max-width: 60%;
+    color: var(--color-accent);
+  }
+}

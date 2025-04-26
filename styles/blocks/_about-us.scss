@@ -1,0 +1,39 @@
+.about-us {
+  background-color: var(--color-gray);
+  border-radius: var(--border-radius-large);
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+  align-items: center;
+  padding: 60px;
+
+  @include mobile {
+    padding: 40px 20px;
+    column-gap: 0;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 30px;
+    max-width: 50%;
+
+    @include mobile {
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      row-gap: 20px;
+    }  
+  }
+
+  &__title {
+    @include mobile {
+      text-align: center;
+    }
+  }
+  
+  &__image-wrapper {
+    max-width: 200px;
+  }
+}

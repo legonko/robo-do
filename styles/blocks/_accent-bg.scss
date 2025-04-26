@@ -1,0 +1,10 @@
+.accent-bg {
+  color: var(--color-accent);
+  padding-inline: 7px;
+  border-radius: var(--border-radius-small);
+  font-weight: bold;
+
+  &--light {
+    background-color: var(--color-light);
+  }
+}

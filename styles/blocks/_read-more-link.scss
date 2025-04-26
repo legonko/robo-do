@@ -1,0 +1,25 @@
+.read-more-link {
+  --icon-color: var(--color-light);
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 15px;
+  font-size: 20px;  
+
+  @include hover {
+    --icon-color: var(--color-accent);
+  }
+  
+  &__icon-wrapper {
+    background-color: currentColor;
+    border-radius: 50%;
+
+    svg {
+      color: var(--icon-color);
+    }
+
+    @include flex-center;
+    @include square(41px);
+  }
+}
