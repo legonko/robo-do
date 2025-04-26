@@ -91,6 +91,10 @@
     justify-content: space-between;
     align-items: center;
     column-gap: 20px;
+
+    @include mobile {
+      column-gap: 5px;
+    }
   }
 
   &__button {
