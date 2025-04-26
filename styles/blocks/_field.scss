@@ -20,12 +20,6 @@
     @include fluid-text(16, 14);
   }
 
-  &__input-wrapper {
-    overflow: hidden;
-    display: inline-block;
-    border-radius: var(--border-radius);
-  }
-
   &__input {
     width: 100%;
     padding: 18px 30px;
